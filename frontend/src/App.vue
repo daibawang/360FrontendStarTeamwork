@@ -4,9 +4,26 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <div>{{a}}</div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  data: function(){
+    return {
+      a: 1
+    }
+  },
+  mounted() {
+    this.a = "mounted完成"
+    this.axios.get('/users').catch(()=>{
+      this.a = '请求服务器失败'
+    })
+  }
+}
+</script>
 
 <style lang="less">
 #app {
