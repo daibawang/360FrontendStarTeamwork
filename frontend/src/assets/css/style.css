@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  background-color: #1E94EA;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 50px;
+  height: 50px;
+  /* margin-top: -200px;
+  margin-left: -200px; */
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: randomBg 50s linear infinite alternate;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.barcontainer {
+  width: 40px;
+  height: 8px;
+  position: relative;
+  padding: 0;
+  curser: pointer;
+}
+
+li {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 1px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s all ease-out;
+  transform-origin: center center;
+}
+
+li.top {
+  transform: translateY(-25px);
+}
+
+li.bottom {
+  transform: translateY(25px);
+}
+
+.fold li.top {
+  transform: translateY(0);
+}
+
+.fold li.mid {
+  transform: scaleX(0);
+}
+
+.fold li.bottom {
+  transform: translateY(0);
+}
+
+.cross li.top {
+  transform: translateY(0) rotate(0.375turn);
+}
+
+.cross li.mid {
+  transform: scaleX(0);
+}
+
+.cross li.bottom {
+  transform: translateY(0) rotate(0.125turn);
+}

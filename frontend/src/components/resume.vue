@@ -6,6 +6,15 @@
       <a href="javascript:;"  :class="active == '#com3' ? 'active' : ''"  @click="toTarget('#com3')">联系</a>
       <a href="javascript:;"  :class="active == '#com4' ? 'active' : ''"  @click="toTarget('#com4')">加入我们</a>
       <a href="javascript:;"  :class="active == '#com5' ? 'active' : ''"  @click="toTarget('#com5')">加入我们</a>
+          <div class="frame">
+            <div class="center">
+                <ul :class="barcontainer +fold +cross"  @click="toogleActive">
+                    <li class="top"></li>
+                    <li class="mid"></li>
+                    <li class="bottom"></li>
+                </ul>
+            </div>
+          </div>
     </header>
       <Con1 id="com1"></Con1>
       <Con2 id="com2"></Con2>
@@ -14,6 +23,7 @@
       <Con5 id="com5"></Con5>
   </div>
 </template>
+<script src="./assets/js/jquery.min.js"></script>
 <script>
 import Con1 from './component1'
 import Con2 from './component2'
@@ -31,6 +41,12 @@ export default {
     },
     data(){
         return{
+           barcontainer:'barcontainer',
+           animTimer : null,
+            hasChanged : false,
+            gapTime : 300,
+           fold:'',
+           cross:'',
            active: '#com1',
            scrollIntoViewOptions:{
              block: 'start',
@@ -50,6 +66,25 @@ export default {
     })
   },
   methods: {
+    toogleActive(){
+      clearTimeout(this.animTimer);
+      if(!this.hasChanged) {
+        // $('.container').addClass('fold');
+        this.fold=' fold';
+        this.animTimer = setTimeout(() => {
+          // $('.container').addClass('cross');
+        this.cross=' cross';
+        }, this.gapTime)
+      } else {
+        this.cross='';
+        // $('.container').removeClass('cross');
+        this.animTimer = setTimeout(() => {
+          // $('.container').removeClass('fold');
+          this.fold='';
+        }, this.gapTime)
+      }
+      this.hasChanged = !this.hasChanged;
+    },
       toTarget(target){
         window.console.log(target)
         this.active = target
@@ -76,6 +111,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@import '../assets/css/style.css';
 #resume {  //关键代码，需要给容器添加高度
   width: 100%;
   max-height: 100vh;
