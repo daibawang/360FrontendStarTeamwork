@@ -1,11 +1,11 @@
 <template>
   <div id="resume">
     <header :class="ishidden">
-      <a href="javascript:;" :class="active == '#com1' ? 'active' : ''" @click="toTarget('#com1')">首页</a>
-      <a href="javascript:;"  :class="active == '#com2' ? 'active' : ''"  @click="toTarget('#com2')">团队</a>
-      <a href="javascript:;"  :class="active == '#com3' ? 'active' : ''"  @click="toTarget('#com3')">联系</a>
-      <a href="javascript:;"  :class="active == '#com4' ? 'active' : ''"  @click="toTarget('#com4')">加入我们</a>
-      <a href="javascript:;"  :class="active == '#com5' ? 'active' : ''"  @click="toTarget('#com5')">加入我们</a>
+      <a href="javascript:;" :class="active == '#com1' ? 'active' : ''" @click="toTarget('#com1')">个人介绍</a>
+      <a href="javascript:;"  :class="active == '#com2' ? 'active' : ''"  @click="toTarget('#com2')">工作经历</a>
+      <a href="javascript:;"  :class="active == '#com3' ? 'active' : ''"  @click="toTarget('#com3')">奖项成就</a>
+      <a href="javascript:;"  :class="active == '#com4' ? 'active' : ''"  @click="toTarget('#com4')">项目经历</a>
+      <!-- <a href="javascript:;"  :class="active == '#com5' ? 'active' : ''"  @click="toTarget('#com5')">加入我们</a> -->
     </header>
     <div class="frame-view">
           <div class="frame">
@@ -22,16 +22,15 @@
       <Con2 id="com2"></Con2>
       <Con3 id="com3"></Con3>
       <Con4 id="com4"></Con4>
-      <Con5 id="com5"></Con5>
+      <!-- <Con5 id="com5"></Con5> -->
   </div>
 </template>
-<script src="./assets/js/jquery.min.js"></script>
 <script>
 import Con1 from './component1'
 import Con2 from './component2'
 import Con3 from './component3'
 import Con4 from './component4'
-import Con5 from './component5'
+// import Con5 from './component5'
 export default {
     name: 'Resume',
     components:{
@@ -39,7 +38,7 @@ export default {
         Con2,
         Con3,
         Con4,
-        Con5
+        // Con5
     },
     data(){
         return{
@@ -62,7 +61,7 @@ export default {
     this.distance_com2 = document.querySelector('#com2').offsetTop - 60
     this.distance_com3 = document.querySelector('#com3').offsetTop - 60
     this.distance_com4 = document.querySelector('#com4').offsetTop - 60
-    this.distance_com5 = document.querySelector('#com5').offsetTop - 60
+    // this.distance_com5 = document.querySelector('#com5').offsetTop - 60
     var self = this
     this.$nextTick(function () {
       document.querySelector('#app').addEventListener('scroll', self.onScroll)
@@ -106,10 +105,8 @@ export default {
           this.active = "#com2"
         } else if (scrolled >= this.distance_com3 && scrolled < this.distance_com4) {
           this.active = "#com3"
-        } else if (scrolled >= this.distance_com4 && scrolled < this.distance_com5){
+        } else{
           this.active = "#com4"
-        }else{
-          this.active = "#com5"
         }
       }
   }
@@ -159,14 +156,7 @@ header{
   // margin-top: 7px;
   // margin-top: -30px;
 }
-#com5{
-  width: 100%;
-  height: 500px;
-  color: #FFFF;
-  font-size: 30px;
-  text-align: center;
-  line-height: 500px;
-}
+
 #com1{
   width: 100%;
 }
@@ -179,9 +169,7 @@ header{
 #com4{
    width: 100%;
 }
-#com5{
-  background: lightblue; 
-}
+
 </style>
 
 

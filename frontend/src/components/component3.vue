@@ -2,23 +2,23 @@
     	<div class="jarallax statistics" id="statistics">
 		<div class="container">
 			<div class="w3-agileits-statistics-heading">
-				<h2>Work Experience</h2>
+				<h2>Achvements</h2>
 			</div>
 			<div class="agile-statistics-grids">
 				<div class="agile-statistics-grid" >
-					<h4>1024</h4>
+					<h4>30</h4>
 					<i class="fa el-icon-trophy-1" aria-hidden="true"></i>
-					<p>Projects Complete</p>
+					<p>原唱歌曲</p>
 				</div>
 				<div class="agile-statistics-grid">
-					<h4>2746</h4>
+					<h4>6</h4>
 					<i class="fa el-icon-data-analysis" ></i>
-					<p>Clients</p>
+					<p>获得奖项</p>
 				</div>
 				<div class="agile-statistics-grid" >
-					<h4>575</h4>
+					<h4>5</h4>
 					<i class="fa el-icon-monitor" aria-hidden="true"></i>
-					<p>Awards</p>
+					<p>荣誉证书</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>

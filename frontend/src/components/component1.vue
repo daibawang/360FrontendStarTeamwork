@@ -7,24 +7,24 @@
             <div class="w3ls-banner-left">
               <div class="w3ls-banner-left-info">
                 <h4>Job Title</h4>
-                <p>Web Designer and Developer</p>
+                <p>业余巨星</p>
               </div>
               <div class="w3ls-banner-left-info">
                 <h4>Name</h4>
-                <p>Steve Watson</p>
+                <p>毛困难</p>
               </div>
               <div class="w3ls-banner-left-info">
                 <h4>Sex</h4>
-                <p>Male</p>
+                <p>25</p>
               </div>
               <div class="w3ls-banner-left-info">
                 <h4>Address</h4>
-                <p>Eiusmod Tempor inclore Place,Kingsport 56777.</p>
+                <p>黑龙江省齐齐哈尔市泰来县</p>
               </div>
               <div class="w3ls-banner-left-info">
                 <h4>Email Address</h4>
                 <p>
-                  <a href="mailto:example@email.com">mail@example.com</a>
+                  <a href="mailto:example@email.com">maokunnan@example.com</a>
                 </p>
               </div>
             </div>
@@ -32,11 +32,13 @@
           <el-col :span="16">
             <div class="w3ls-banner-right">
               <div class="banner-right-img">
-                <img src="@/assets/1.jpg" alt>
+                <img src="@/assets/11.jpg" alt>
               </div>
               <div class="banner-right-info">
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent scelerisque tellus dignissim dolor dignissim, sit amet convallis nisi dignissim.</h2>
-                <p>Donec dolor felis, consectetur eget massa non, mattis euismod est. Nam augue neque, hendrerit nec scelerisque non, ultrices at ligula. Praesent posuere, turpis eget lobortis elementum, ex ante ultricies ligula, sit amet varius lacus dui in magna. Aliquam erat volutpat. Nulla condimentum, enim vitae congue ultrices, nibh erat efficitur sem, vel iaculis lectus eros in turpis. Aliquam venenatis cursus suscipit.</p>
+                <h2>毛困难，原名王维家，1994年10月1日出生于黑龙江省齐齐哈尔市泰来县，中国内地流行乐男歌手，毕业于杭州师范大学护理专业。</h2>
+                <p>
+                  2017年，参加腾讯视频选秀娱乐节目《明日之子》，获得全国总决赛冠军，从而正式进入演艺圈  ；9月1日，推出首张个人现场专辑《巨星不易工作室 No.1》  ；11月11日，推出个人原创单曲《项羽虞姬》  ；12月28日，获得腾讯娱乐白皮书音乐年度之星奖  。2018年1月7日，获得首届金鲛奖年度十佳网络新星奖  ；4月，作为“无限唱作人”参加江苏卫视音乐唱作类真人秀节目《无限歌谣季》 [6]  ；5月31日，推出首张个人录音室专辑《平凡的一天》 [7]  ；同年，获得亚洲新歌榜年度盛典年度最佳音乐人奖 [8]  、亚洲音乐盛典最具潜力男歌手奖、年度最佳唱作人奖 [9]  。2019年3月25日，其演唱的歌曲《平凡的一天》获得第26届东方风云榜音乐盛典十大金曲奖、最佳作词奖
+                </p>
               </div>
               <div class="clearfix"></div>
             </div>

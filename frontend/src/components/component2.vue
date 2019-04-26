@@ -11,8 +11,26 @@
                         <i class="fa el-icon-bell" aria-hidden="true"></i>
                     </div>
                     <div class="experience-grid-info">
-                        <h5>Ut dapibus nisi turpis</h5>
-                        <p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p>
+                        <h5>杭州某医院实习</h5>
+                        <p>不知未来会在哪个城市平凡地生活，从事什么样的工作，期待，但更彷徨</p>
+                    </div>
+                </div>
+                <div class=" experience-grid">
+                    <div class="experience-grid-icon icon-left hvr-radial-out">
+                        <i class="fa el-icon-user-solid" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-grid-info">
+                        <h5>明日之子节目参赛者</h5>
+                        <p>喝几口酒，背上即将断线的吉他，从变有钱一首首唱到了最后，手捧最强厂牌的白金唱片出道</p>
+                    </div>
+                </div>
+                <div class=" experience-grid">
+                    <div class="experience-grid-icon icon-left hvr-radial-out">
+                        <i class="fa el-icon-s-platform" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-grid-info">
+                        <h5>哇唧唧哇工作</h5>
+                        <p>和好朋友在北京有了家一起住，不断的实现追星梦，唱着歌，从事着自己喜欢的工作，为哇唧唧哇奋斗，攒钱买房</p>
                     </div>
                 </div>
                 
@@ -56,7 +74,7 @@ export default {
     text-align: center;
     padding: 2em;
 }
-.experience-grid-icon i.fa.el-icon-bell{
+.experience-grid-icon i.fa.el-icon-bell, .experience-grid-icon i.fa.el-icon-user-solid,.experience-grid-icon i.el-icon-s-platform{
     color: #2f2f2f;
     background: none;
     border: solid 2px #ff9800;
