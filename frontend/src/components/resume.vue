@@ -10,7 +10,7 @@
     <div class="frame-view">
           <div class="frame">
             <div class="center">
-                <ul :class="barcontainer +fold +cross"  @click="toogleActive">
+                <ul :class="barcontainer + fold + cross"  @click="toogleActive">
                     <li class="top"></li>
                     <li class="mid"></li>
                     <li class="bottom"></li>
@@ -44,12 +44,12 @@ export default {
     data(){
         return{
            barcontainer:'barcontainer',
+           fold:' fold',
+           cross:' cross',
            animTimer : null,
             hasChanged : false,
             gapTime : 300,
-           fold:'',
-           cross:'',
-           ishidden:"headerhidden",
+           ishidden:"",
            active: '#com1',
            scrollIntoViewOptions:{
              block: 'start',
@@ -159,7 +159,7 @@ header{
   // margin-top: 7px;
   // margin-top: -30px;
 }
-#com3,#com4,#com5{
+#com3,#com5{
   width: 100%;
   height: 500px;
   color: #FFFF;
@@ -177,7 +177,7 @@ header{
   background: orange;
 }
 #com4{
-  background: lightgreen;
+   width: 100%;
 }
 #com5{
   background: lightblue; 
