@@ -159,7 +159,7 @@ header{
   // margin-top: 7px;
   // margin-top: -30px;
 }
-#com3,#com5{
+#com5{
   width: 100%;
   height: 500px;
   color: #FFFF;
@@ -174,7 +174,7 @@ header{
   width: 100%;
 }
 #com3{
-  background: orange;
+  width: 100%;
 }
 #com4{
    width: 100%;
