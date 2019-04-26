@@ -58,7 +58,7 @@ export default {};
 .banner {
   background: url(../assets/6.jpg) no-repeat 0px 0;
   background-size: cover;
-  padding: 4em 0 5em;
+  padding: 2em 0 5em;
   .container {
     width: 60%;
     margin: 30px auto;

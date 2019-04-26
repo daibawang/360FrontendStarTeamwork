@@ -1,11 +1,13 @@
 <template>
   <div id="resume">
-    <header>
+    <header :class="ishidden">
       <a href="javascript:;" :class="active == '#com1' ? 'active' : ''" @click="toTarget('#com1')">首页</a>
       <a href="javascript:;"  :class="active == '#com2' ? 'active' : ''"  @click="toTarget('#com2')">团队</a>
       <a href="javascript:;"  :class="active == '#com3' ? 'active' : ''"  @click="toTarget('#com3')">联系</a>
       <a href="javascript:;"  :class="active == '#com4' ? 'active' : ''"  @click="toTarget('#com4')">加入我们</a>
       <a href="javascript:;"  :class="active == '#com5' ? 'active' : ''"  @click="toTarget('#com5')">加入我们</a>
+    </header>
+    <div class="frame-view">
           <div class="frame">
             <div class="center">
                 <ul :class="barcontainer +fold +cross"  @click="toogleActive">
@@ -15,7 +17,7 @@
                 </ul>
             </div>
           </div>
-    </header>
+    </div>
       <Con1 id="com1"></Con1>
       <Con2 id="com2"></Con2>
       <Con3 id="com3"></Con3>
@@ -47,6 +49,7 @@ export default {
             gapTime : 300,
            fold:'',
            cross:'',
+           ishidden:"headerhidden",
            active: '#com1',
            scrollIntoViewOptions:{
              block: 'start',
@@ -69,19 +72,22 @@ export default {
     toogleActive(){
       clearTimeout(this.animTimer);
       if(!this.hasChanged) {
-        // $('.container').addClass('fold');
-        this.fold=' fold';
-        this.animTimer = setTimeout(() => {
-          // $('.container').addClass('cross');
-        this.cross=' cross';
-        }, this.gapTime)
-      } else {
         this.cross='';
         // $('.container').removeClass('cross');
         this.animTimer = setTimeout(() => {
           // $('.container').removeClass('fold');
+        this.ishidden="headerhidden";
           this.fold='';
         }, this.gapTime)
+      } else {
+                // $('.container').addClass('fold');
+        this.fold=' fold';
+        this.animTimer = setTimeout(() => {
+          // $('.container').addClass('cross');
+        this.ishidden="";
+        this.cross=' cross';
+        }, this.gapTime)
+
       }
       this.hasChanged = !this.hasChanged;
     },
@@ -116,7 +122,10 @@ export default {
   width: 100%;
   max-height: 100vh;
   overflow-y: scroll;
-  background: #f1f1f1;
+  background: #ffffff;
+}
+.headerhidden{
+  display:none;
 }
 header{
   width: 100%;
@@ -142,7 +151,15 @@ header{
     }
   }
 }
-#com2,#com3,#com4,#com5{
+.frame-view{
+  position:fixed;
+  top:0%;
+  right:10%;
+  z-index:2;
+  // margin-top: 7px;
+  // margin-top: -30px;
+}
+#com3,#com4,#com5{
   width: 100%;
   height: 500px;
   color: #FFFF;
@@ -154,7 +171,7 @@ header{
   width: 100%;
 }
 #com2{
-  background: deepskyblue;
+  width: 100%;
 }
 #com3{
   background: orange;

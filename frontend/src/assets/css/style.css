@@ -1,15 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
 .frame {
-  background-color: #1E94EA;
+  background-color: #555858;
   position: absolute;
-  top: 20%;
+  top: 15%;
   right: 10%;
   width: 50px;
-  height: 50px;
+  height: 46px;
+  margin-top: 8px;
   /* margin-top: -200px;
   margin-left: -200px; */
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   color: #333;
@@ -27,8 +28,8 @@
 }
 
 .barcontainer {
-  width: 40px;
-  height: 8px;
+  width: 35px;
+  height: 6px;
   position: relative;
   padding: 0;
   curser: pointer;
@@ -49,11 +50,11 @@ li {
 }
 
 li.top {
-  transform: translateY(-25px);
+  transform: translateY(-12px);
 }
 
 li.bottom {
-  transform: translateY(25px);
+  transform: translateY(12px);
 }
 
 .fold li.top {
